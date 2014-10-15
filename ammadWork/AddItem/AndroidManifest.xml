@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.additem"
+    android:versionCode="1"
+    android:versionName="1.0" >
+  <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+
+    <!-- Required for fetching feed data. -->
+     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Required to register a SyncStatusObserver to display a "syncing..." progress indicator. -->
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <!-- Required to enable our SyncAdapter after it's created. -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <!-- Required because we're manually creating a new account. -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    
+     <uses-permission android:name="android.permission.CAMERA"/>
+<uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+          
+       <activity android:name="com.google.zxing.client.android.CaptureActivity"
+   android:screenOrientation="landscape"
+   android:configChanges="orientation|keyboardHidden"
+   android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+   android:windowSoftInputMode="stateAlwaysHidden">
+   <intent-filter>
+      <action android:name="com.google.zxing.client.android.SCAN"/>
+      <category android:name="android.intent.category.DEFAULT"/>
+    </intent-filter>
+</activity>
+
+       
+         <activity
+            android:name=".MainActivity"
+            android:label="Add Item"
+            android:screenOrientation="portrait" >
+          
+        
+        </activity>
+        
+       
+        
+           <activity
+            android:name=".SelectCategoryActivity"
+            android:label="Category"
+             >
+            <!-- This intent filter places this activity in the system's app launcher. -->
+              <intent-filter 
+                  android:label="@string/app_name">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+           
+        <activity
+            android:name=".SelectBrandActivity"
+            android:label="Brand" >
+        </activity>
+
+     
+</application>
+</manifest>

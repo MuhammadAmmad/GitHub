@@ -1,0 +1,279 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+  
+    tools:context="com.example.formapp.MainActivity"
+    android:orientation="vertical" >
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        
+        
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="10">
+    
+    
+
+    <ToggleButton
+        android:id="@+id/toggleSpeech"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="ToggleButton"/>
+
+    
+    
+    </LinearLayout>
+        
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+    
+    <TextView
+       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+       
+        android:text="SKU/Barcode : " />
+    
+
+    <AutoCompleteTextView
+        android:id="@+id/sku"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLines="1"
+        android:layout_weight="10"
+        >
+
+        <requestFocus android:layout_width="wrap_content" />
+
+    </AutoCompleteTextView>
+    
+    <ImageButton
+        android:id="@+id/btnScanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      	android:background="@null"
+        android:src="@drawable/launcher_icon" />
+    
+    
+    
+    </LinearLayout>
+    
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+    <TextView
+       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+       
+        android:text="Title : " />
+
+    <AutoCompleteTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+         android:maxLines="1" >
+
+       
+
+    </AutoCompleteTextView>
+    
+    </LinearLayout>
+    
+     
+      <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+    <TextView
+       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+       
+        android:text="Description : " />
+
+   <EditText
+       android:id="@+id/description"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:ems="10"
+       android:inputType="textMultiLine"
+     
+    android:gravity="top|left" 
+     android:scrollbars="vertical"
+     
+       android:lines="5" 
+        android:maxLines="5"
+        android:minLines="5"
+        
+        >
+
+       
+
+    </EditText>
+    
+    </LinearLayout>
+    
+        <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+    <TextView
+       android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+       
+        android:text="Type : " />
+
+    <AutoCompleteTextView
+        android:visibility="gone"
+        android:id="@+id/type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+         android:maxLines="1">
+
+        
+
+    </AutoCompleteTextView>
+    
+    </LinearLayout>
+
+        
+            <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+    <TextView
+       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+       
+        android:text="UOM : " />
+
+     <Spinner
+                android:id="@+id/uom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+    
+    </LinearLayout>
+
+            
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+    <TextView
+       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+       
+        android:text="Category : " />
+
+     <AutoCompleteTextView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+         android:maxLines="1">
+
+        
+
+    </AutoCompleteTextView>
+    
+    </LinearLayout>
+            
+           <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+    <TextView
+       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+       
+        android:text="Brand : " />
+
+     <AutoCompleteTextView
+        android:id="@+id/brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+         android:maxLines="1">
+
+        
+
+    </AutoCompleteTextView>
+    
+    </LinearLayout>
+
+           
+
+     <com.example.additem.ExpandableHeightGridView
+                      android:id="@+id/imagesGridView"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:columnWidth="90dp"
+                      android:numColumns="auto_fit"
+                     
+                      />
+                  
+         
+         
+             
+            
+ </LinearLayout>          
+  </ScrollView>
+<!--     <LinearLayout  -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:weightSum="10" -->
+<!--         android:padding="5dp" -->
+<!--         android:background="#000" -->
+<!--         > -->
+    
+<!--     <ImageButton -->
+<!--                android:id="@+id/btnAdd" -->
+<!--                android:layout_width="0dp" -->
+<!--                android:layout_height="wrap_content" -->
+<!--                android:layout_weight="5" -->
+<!--                android:background="@null" -->
+<!--                android:src="@android:drawable/ic_menu_add" /> -->
+
+<!--     <ImageButton -->
+<!--         android:id="@+id/button2" -->
+<!--         android:layout_width="0dp" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_weight="5" -->
+<!--         android:background="@null" -->
+<!--         android:src="@android:drawable/ic_menu_close_clear_cancel" /> -->
+    
+<!--     </LinearLayout> -->
+    
+
+</LinearLayout>

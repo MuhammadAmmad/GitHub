@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.formapp.MainActivity" >
+
+    <item
+        android:id="@+id/actionImage"
+        android:orderInCategory="100"
+        android:title="take image"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:showAsAction="always"/>
+    
+     <item
+        android:id="@+id/actionAdd"
+        android:orderInCategory="100"
+        android:title="add item"
+        android:icon="@android:drawable/ic_menu_save"
+        android:showAsAction="always"/>
+     
+     <item
+        android:id="@+id/actionReset"
+        android:orderInCategory="100"
+        android:title="Sync"
+        android:icon="@drawable/ic_action_refresh"
+        android:showAsAction="always"/>
+     
+       
+
+</menu>
